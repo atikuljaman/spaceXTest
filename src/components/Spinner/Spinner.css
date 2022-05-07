@@ -1,0 +1,58 @@
+.spinner {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.spinner div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 10px solid transparent;
+    border-top-color: #44ad7c;
+    border-radius: 50%;
+    animation: spinnerOne 1.2s linear infinite;
+}
+
+.spinner div:nth-child(2) {
+    border: 10px solid transparent;
+    border-bottom-color: #44ad7c;
+    animation: spinnerTwo 1.2s linear infinite;
+}
+
+@keyframes spinnerOne {
+    0% {
+        transform: rotate(0deg);
+        border-width: 10px;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-width: 1px;
+        border-top-color: blue;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-width: 10px;
+    }
+}
+
+@keyframes spinnerTwo {
+    0% {
+        transform: rotate(0deg);
+        border-width: 1px;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-width: 10px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-width: 1px;
+        border-bottom-color: blue;
+    }
+}
